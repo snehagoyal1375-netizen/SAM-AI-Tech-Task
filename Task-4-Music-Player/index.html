@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sneha's Music Player | Task 4</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <header>
+      <div>
+        <p class="eyebrow">SAM AI TECHNOLOGIES • TASK 4</p>
+        <h1>My Music Player</h1>
+      </div>
+      <button id="themeBtn" class="icon-btn" title="Toggle theme">☾</button>
+    </header>
+
+    <section class="now-playing">
+      <div class="cover" id="cover">♫</div>
+      <div class="track-info">
+        <p class="label">NOW PLAYING</p>
+        <h2 id="title">Loading...</h2>
+        <p id="artist">Demo Artist</p>
+      </div>
+    </section>
+
+    <audio id="audio" preload="metadata"></audio>
+
+    <div class="progress-area">
+      <span id="currentTime">0:00</span>
+      <input id="progress" type="range" min="0" max="100" value="0">
+      <span id="duration">0:00</span>
+    </div>
+
+    <div class="controls">
+      <button id="prev" class="control" title="Previous">⏮</button>
+      <button id="play" class="play" title="Play/Pause">▶</button>
+      <button id="next" class="control" title="Next">⏭</button>
+    </div>
+
+    <div class="volume-row">
+      <span>🔊</span>
+      <input id="volume" type="range" min="0" max="1" step="0.01" value="0.8">
+      <button id="mute" class="small-btn">Mute</button>
+    </div>
+
+    <section class="playlist-section">
+      <div class="section-head">
+        <h3>Playlist</h3>
+        <label class="add-btn">+ Add Songs
+          <input id="fileInput" type="file" accept="audio/*" multiple hidden>
+        </label>
+      </div>
+      <div id="playlist" class="playlist"></div>
+    </section>
+
+    <footer>
+      <span>HTML • CSS • JavaScript</span>
+      <span id="status">Ready</span>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
